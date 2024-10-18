@@ -14,7 +14,7 @@ echo -e "$color Create App Directory $no_color"
 rm -rf /app
 mkdir /app
 
-echo -e "$colorDownload App Content $no_color"
+echo -e "$color Download App Content $no_color"
 curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch-v3.zip
 cd /app
 
