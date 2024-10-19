@@ -9,7 +9,7 @@ echo -e "$color Copy Install golang $no_color"
 dnf install golang -y
 echo $?
 
-app_prerequistes
+app_prerequisites
 
 echo -e "$color Download App Dependencies $no_color"
 go mod init dispatch
