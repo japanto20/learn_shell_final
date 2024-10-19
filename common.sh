@@ -111,7 +111,7 @@ maven_setup() {
 
   for sql_file in schema app-user master-data; do
     print_heading "Load SQL File - $sql_file"
-    mysql -h mysql.antodevops.online -uroot -pRoboShop@1 < /app/db/$sql_file.sql
+    mysql -h mysql.antodevops.online -uroot -pRoboShop@1 < /app/db/$sql_file.sql &>>$log_file
     status_check $?
   done
 
