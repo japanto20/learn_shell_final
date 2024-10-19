@@ -35,4 +35,4 @@ status_check() {
   else
       echo -e "\e[32m FAILURE \e[0m"
   fi
-}}
+}
