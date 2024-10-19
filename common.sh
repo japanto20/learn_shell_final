@@ -1,7 +1,7 @@
 color="\e[36m"
 no_color="\e[0m"
 log_file=/tmp/roboshop.log
-rm-f $log_file
+rm -f $log_file
 
 app_prerequisites() {
   print_heading "Add app user"
@@ -30,7 +30,7 @@ print_heading() {
 }
 
 status_check() {
-   if [ $1 -eq 0 ]; then
+   if [ "$1" -eq 0 ]; then
       echo -e "\e[32m SUCCESS \e[0m"
   else
       echo -e "\e[32m FAILURE \e[0m"
