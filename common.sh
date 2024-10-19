@@ -106,15 +106,7 @@ maven_setup() {
   mv target/$app_name-1.0.jar $app_name.jar &>>$log_file
   status_check $?
 
-  print_heading "Install MySQl client"
-  dnf install mysql -y &>>$log_file
-  status_check $?
 
-  for sql_file in schema app-user master-data; do
-    print_heading "Load SQL File - $sql_file"
-    mysql -h mysql.antodevops.online -uroot -p$MYSQL_ROOT_PASSWORD < /app/db/$sql_file.sql &>>$log_file
-    status_check $?
-  done
 
 
   systemd_setup
